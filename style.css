@@ -1,0 +1,114 @@
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+div {
+	width: 75%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* main div */
+.main .newUserDiv {
+	display: none;
+}
+
+.form .usersTableDiv {
+	display: none;
+}
+
+.form .addNewClientDiv {
+	display: none;
+}
+
+.form .newUserDiv {
+	display: block;
+}
+
+/* table */
+table {
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #3b639f;
+}
+
+
+/* thead */
+thead {
+	color: white;
+	border: none;
+	text-align: left;
+	height: 50px;
+	font-size: 20px;
+	background: linear-gradient(#4e7dba, #3b639f);
+}
+
+thead th:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* tbody */
+tbody tr {
+	border-bottom: 1px solid #4e7dba;
+}
+
+tbody td {
+	width: 17%;
+	height: 35px;
+}
+
+td button {
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+/* create-task form */
+#registerForm {
+	width: 100%;
+	text-align: left;
+	background-color: #FAEEDD;
+}
+
+#registerForm button, select {
+
+}
+
+#registerForm button {
+
+}
+
+#registerForm button:disabled {
+
+}
+
+#registerForm button:hover {
+	background-color: #FAE7B5;
+}
+
+#registerForm input {
+
+}
+
+/* add new client button */
+
+#addNewClientDiv button {
+	float: right;
+	height: 100%;
+	background: linear-gradient(#4e7dba, #3b639f);
+	color: white;
+	border: 1px solid white;
+}
+
+#addNewClientDiv {
+	height: 35px;
+}

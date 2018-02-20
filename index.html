@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clients</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="ui/jquery-ui.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="main" class="main">
+
+		<div id="usersTableDiv" class="usersTableDiv">
+			<table id="users">
+				<thead id="tableHeader">
+					<tr>
+						<th data-sortby="name" name="sortHeader" class="asc">Name</th>
+						<th data-sortby="surname" name="sortHeader" class="asc">Surname</th>
+						<th data-sortby="manager" name="sortHeader" class="asc">Manager</th>
+						<th data-sortby="ordersCount" name="sortHeader" class="asc">Orders</th>
+						<th data-sortby="moneySpent" name="sortHeader" class="asc">Money</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody id="container">
+
+				</tbody>
+			</table>
+		</div>
+
+		<div id="newUserDiv" class="newUserDiv">
+			<form id="registerForm">
+				<input type="hidden" name="id" id="id">
+				<input type="hidden" name="moneySpent" id="moneySpent">
+				<input type="hidden" name="ordersCount" id="ordersCount">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name">
+				<br />
+				<label for="surname">Surname</label>
+				<input type="text" name="surname" id="surname">
+				<br />
+				<label for="manager">Manager</label>
+				<input type="text" name="manager" id="manager">
+				<br />
+				<button type="button" id="addNewClientBtn">Save</button>
+				<button type="button" id="cancelBtn">Cancel</button>
+			</form>
+		</div>
+
+		<div id="addNewClientDiv" class="addNewClientDiv">
+			<button id="createClientBtn">Add new client</button>
+		</div>
+
+	</div>
+
+	<div id="dialogForm" title="Create new Client">
+	<form>
+	    <fieldset>
+		    <label for="moneySpent">Amount:</label>
+		    <input type="number" name="orderAmount" id="orderAmount">
+		    <div id="warning"></div>
+	    </fieldset>
+	</form>
+	</div>
+
+	<script type="text/appTemplate" id="userTemplate">
+		<tr data-id="{{id}}">
+			<td class="name">{{name}}</td>
+			<td class="surname">{{surname}}</td>
+			<td class="manager">{{manager}}</td>
+			<td class="ordersCount">{{ordersCount}}</td>
+			<td class="moneySpent">{{moneySpent}}</td>
+			<td class="buttonsCell">
+				<button type="button" class="addOrderBtn">Add order</button>
+				<button type="button" class="editClientBtn">Edit</button>
+				<button type="button" class="delClientBtn">Delete</button>
+			</td>
+		</tr>
+	</script>
+</body>
+</html>
